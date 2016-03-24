@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="hosp"
+  id="myeclipse.1458314690509"
+  context-root="/hosp"
+  j2ee-spec="6.0"
+  archive="hosp.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
