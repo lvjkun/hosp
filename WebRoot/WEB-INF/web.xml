@@ -17,6 +17,8 @@
  		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
  		<load-on-startup>2</load-on-startup>
  	</servlet>
+  
+
  	<servlet-mapping>
  		<servlet-name>dgtcm</servlet-name>
  		<url-pattern>*.html</url-pattern>

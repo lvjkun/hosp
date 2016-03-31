@@ -1,5 +1,7 @@
 package com.dgtcm.web;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,8 +17,15 @@ public class RegisterController {
 	private RegisterService registerService;
 	
 	@RequestMapping(value="/registerController.html")
-	public ModelAndView register( Patient patient){
-	
+	public ModelAndView register(HttpServletRequest request, Patient patient){
+		
+		request.setAttribute("name", patient.getName());
+		request.setAttribute("age", patient.getAge());
+		request.setAttribute("gender", patient.getGender());
+		request.setAttribute("address", patient.getAddress());
+		request.setAttribute("dateOfBirth", patient.getDateOfBirth());
+		request.setAttribute("idcardNo", patient.getIdcardNo());
+		
 		int count = registerService.registerService(patient);
 		if(count > 0){
 			return new ModelAndView("success");

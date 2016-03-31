@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -9,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'success.jsp' starting page</title>
+    <title>My JSP 'signUp.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -23,12 +24,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    挂号成功<br>
-    姓名：${requestScope.name }<br>
-   年龄：${requestScope.age }<br>
-   性别：${requestScope.gender }<br>
-   地址：${requestScope.address }<br>
-   出生日期：${requestScope.dateOfBirth }<br>
-   身份证号码：${requestScope.idcardNo }<br>
+    <form action="<c:url value="/signUp.html"/>" method="post">
+    		<p class="l1">用户注册</p>
+    		<input type="text" placeholder="用户名" name="username" class="l2">
+    		<input type="password" placeholder="密码" name="password" class="l3">
+    		<input type="submit" value="提交"  class="l4"> 
+    		
+  	    </form>
   </body>
 </html>

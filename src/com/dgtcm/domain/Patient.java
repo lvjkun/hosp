@@ -9,9 +9,15 @@ public class Patient implements Serializable{
 	private int age;
 	private String address;
 	private String department;
-	private int idcardNo;
+	private String idcardNo;
 	private int dateOfBirth;
 	
+	public String getIdcardNo() {
+		return idcardNo;
+	}
+	public void setIdcardNo(String idcardNo) {
+		this.idcardNo = idcardNo;
+	}
 	public int getId() {
 		return id;
 	}
@@ -48,17 +54,19 @@ public class Patient implements Serializable{
 	public void setDepartment(String department) {
 		this.department = department;
 	}
-	public int getIdcardNo() {
-		return idcardNo;
-	}
-	public void setIdcardNo(int idcardNo) {
-		this.idcardNo = idcardNo;
-	}
+	
 	public int getDateOfBirth() {
 		return dateOfBirth;
 	}
 	public void setDateOfBirth(int dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
+	}
+	@Override
+	public  String toString() {
+		return " 姓名:" + name + ", 性别:" + gender
+				+ ", 年龄：" + age + ", 地址：" + address + ", 科室："
+				+ department + ", 身份证号码：" + idcardNo + ", 出生日期："
+				+ dateOfBirth + "。";
 	}
 	
 }

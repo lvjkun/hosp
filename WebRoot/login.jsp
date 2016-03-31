@@ -87,11 +87,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<form action="<c:url value="/loginCheck.html"/>" method="post">
     		<p class="l1">病人信息管理系统</p>
     		<input type="text" placeholder="用户名" name="username" class="l2">
-    	
-    
     		<input type="password" placeholder="密码" name="password" class="l3">
-    	
     		<input type="submit" value="登录"  class="l4"> 
+    		<a href="/hosp/signUp.jsp" >用户注册</a>
   	    </form>
     </div>
     <c:if test="${!empty error }">
